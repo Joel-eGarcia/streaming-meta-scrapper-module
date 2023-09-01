@@ -1,0 +1,18 @@
+{
+  "version": "0.0.1",
+  "author": "L.Laurentiu <l.laurentiu@ymail.com>",
+  "dependencies": {
+    "country-code-lookup": "^0.0.23",
+    "joi": "^17.9.2",
+    "jsdom": "^22.1.0",
+    "path": "^0.12.7",
+    "puppeteer": "^20.2.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "requestretry": "^7.1.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.1.2"
+  }
+}
