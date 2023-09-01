@@ -1,6 +1,6 @@
 {
   "name": "streaming-meta-scrapper",
-  "version": "0.0.1",
+  "version": "0.1.2",
   "author": "L.Laurentiu <l.laurentiu@ymail.com>",
   "dependencies": {
     "country-code-lookup": "^0.0.23",
