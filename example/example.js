@@ -1,5 +1,5 @@
 require('dotenv').config()
-const streamingMeta = require('streaming-meta-scrapper');
+const streamingMeta = require('./../index');
 
 (async () => {
 	const scrapper = new streamingMeta({
