@@ -1,13 +1,12 @@
 require('dotenv').config()
-const smsm = require('./../index');
+const streamingMeta = require('streaming-meta-scrapper');
 
 (async () => {
-	const scrapper = new smsm({
-		name: 'Better Things',
-		id: 'tt4370596',
+	const scrapper = new streamingMeta({
+		name: 'Better Things', // Show or Movie name
+		id: 'tt4370596', // IMdb or TMdB ID
 		providers: ['nfx', 'hbm', 'dnp'],
-		locale: 'ro-RO',
+		locale: 'ro-RO', // Language and Country
 	});
 	const metadata = await scrapper.getMetadata();
-	console.log(metadata);
 })();
