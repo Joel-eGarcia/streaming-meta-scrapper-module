@@ -1,4 +1,5 @@
 {
+  "name": "streaming-meta-scrapper",
   "version": "0.0.1",
   "author": "L.Laurentiu <l.laurentiu@ymail.com>",
   "dependencies": {
