@@ -1,3 +1,1 @@
-module.exports = {
-	smsm: require('./src/Meta'),
-};
+module.exports = require('./src/Meta')
