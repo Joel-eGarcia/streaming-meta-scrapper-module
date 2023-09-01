@@ -113,7 +113,7 @@ class Meta {
 						);
 					} else {
 						console.log(
-							`${this.infoName}: Please set ${name} username/password and account country code of origin before scraping metadata`
+							`${this.infoName}: Please set ${name} username/password and account country code of origin before scraping metadata. See Environment variables in README`
 						);
 					}
 				}
