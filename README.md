@@ -292,4 +292,4 @@ SMSM_NFX_ORIGIN_COUNTRY_CODE=RO
   ]
 }
 ```
-####  Current project version: 0.01 (alpha)
+####  Current project version: 0.1.2 (alpha)
