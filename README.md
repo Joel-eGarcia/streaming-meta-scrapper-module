@@ -31,8 +31,8 @@ const streamingMeta = require('streaming-meta-scrapper');
 ```shell
 SMSM_COUNTRY_CODE=RO
 SMSM_LANGUAGE_CODE=ro
-SMSM_NFX_USER=
-SMSM_NFX_PASSWORRD=
+SMSM_NFX_USER=user
+SMSM_NFX_PASSWORD=password
 SMSM_NFX_ORIGIN_COUNTRY_CODE=RO
 ```
 ##  Metadata response example
