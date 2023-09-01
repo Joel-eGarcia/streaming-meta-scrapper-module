@@ -12,6 +12,7 @@
     "requestretry": "^7.1.0",
     "uuid": "^9.0.0"
   },
+  "git repository": "https://github.com/Project-Coeus/streaming-meta-scrapper-module",
   "devDependencies": {
     "dotenv": "^16.1.2"
   }
