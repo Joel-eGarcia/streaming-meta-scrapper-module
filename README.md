@@ -19,12 +19,12 @@ const streamingMeta = require('streaming-meta-scrapper');
 ## Supported metadata providers
 |                        	| HBO Max 	| Disney Plus 	| Netflix 	|
 |------------------------	|---------	|-------------	|---------	|
-| Title                  	|   &check;      	|        &check;     	|       &check;  	|
-| Description            	|      &check;  	|         &check;   	|      &check;   	|
-| Poster image           	|      &check;   	|          &check;   	|      &check;  	|
-| Logo image             	|      &check;   	|       &check;      	|     &check;    	|
-| Backdrop image         	|       &check;  	|         &check;    	|     &check;   	|
-| Id                     	| &check;     	|         &check;    	|      &check;   	|
+| Title                  	|  &check;      | &check;     	| &check;  	|
+| Description            	|  &check;  	| &check;   	| &check;   	|
+| Poster image           	|  &check;   	| &check;   	| &check;  	|
+| Logo image             	|  &check;   	| &check;      	| &check;    	|
+| Backdrop image         	|  &check;  	| &check;    	| &check;   	|
+| Id                     	| &check;     	| &check;    	| &check;   	|
 | Require account 	| No      	| No          	| Yes     	|
 
 ##  Environment variables
@@ -34,5 +34,9 @@ SMSM_LANGUAGE_CODE=ro
 SMSM_NFX_USER=
 SMSM_NFX_PASSWORRD=
 SMSM_NFX_ORIGIN_COUNTRY_CODE=RO
+```
+##  Metadata respone example
+```json
+
 ```
 ####  Current version: 0.01
