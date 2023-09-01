@@ -9,7 +9,7 @@ const streamingMeta = require('streaming-meta-scrapper');
 (async () => {
 	const scrapper = new streamingMeta({
 		name: 'Better Things', // Show or Movie name
-		id: 'tt4370596', // IMdb or TMdB ID
+		id: 'tt4370596', // IMdb or TMDB ID
 		providers: ['nfx', 'hbm', 'dnp'],
 		locale: 'ro-RO', // Language and Country
 	});
@@ -129,48 +129,6 @@ SMSM_NFX_ORIGIN_COUNTRY_CODE=RO
             "brief": "Sam se confruntă cu treburi femeiești.",
             "medium": "Sam află că copiii au vandalizat casa cât ea a fost plecată, ginecologul îi dă vești neașteptate și trebuie să vorbească la un seminar de emancipare a femeilor și fetelor la liceul lui Frankie."
           }
-        },
-        {
-          "seasonNumber": 1,
-          "episodeNumber": 3,
-          "providerEpisodeId": "f1505337-5471-4410-b88b-033295d86a2c",
-          "title": {
-            "full": "Brown",
-            "brief": null
-          },
-          "description": {
-            "full": "Sam lucrează la un film cu o mare vedetă. Regizorul, Mel - un regizor celebru, a cărui carieră a cunoscut zile mai bune - este un fan al ei; cei doi discută despre carierele lor, iar ea îl invită să ia cina la ea acasă, împreună cu familia. Prietena lui Sam, Sunny, care are o căsnicie groaznică și care consideră că viața lui Sam are prea mult farmec, crede că Sam ar trebui să aibă o aventură cu Mel, care este căsătorit. Când Jeff, soțul inutil al lui Sunny, o dă în vileag pe Sunny fără ca aceasta să știe, Sam se descarcă pe el. La cină, Mel se înțelege bine cu copiii... dar Phyllis are o reacție ciudată la întâlnirea cu el, iar Mel este convins - în ciuda obiecțiilor lui Sam - că este din cauză că este negru.",
-            "brief": "Sam invită un coleg acasă, la cină.",
-            "medium": "Sam invită un coleg acasă, la cină - Mel, regizorul filmului la care lucrează. Prietena ei Sunny, care își trăiește viața prin prisma ei, crede că ea și Mel ar trebui să aibă o aventură."
-          }
-        },
-        {
-          "seasonNumber": 1,
-          "episodeNumber": 4,
-          "providerEpisodeId": "638d795b-ee3f-4158-93f8-15396456ca4d",
-          "title": {
-            "full": "Femeia este ceva-ul din ceva",
-            "brief": null
-          },
-          "description": {
-            "full": "Sam, care este atât de extenuată încât doarme în mașină doar pentru a se relaxa în liniște, întâlnește o femeie fără adăpost care îi oferă o perspectivă șocantă asupra maternității și a sacrificiului pentru copiii tăi. Mai târziu, copiii fac ca diverse situații stresante să fie și mai stresante... mai ales când o strigă pe Sam ca să îl sune pe tatăl lor pentru a se ocupa de un incident minor care nu necesită în niciun caz intervenția lui. Epuizarea ei crește și se gândește la o operație estetică... dar, fără să știe, soarta ei profesională ar putea fi pe cale să se schimbe. Este luată în considerare pentru rolul principal într-un serial de comedie, dar sunt mulți factori în joc. Factori foarte, foarte stupizi. Cum ar fi dacă toți cei implicați pot fi convinși că o femeie mai în vârstă poate juca într-un serial de comedie. În timp ce în culise se desfășoară manevrele legate de acest lucru, singura femeie implicată în negocieri se află într-o situație dificilă. Iar managerul lui Sam, Tressa, îi ascunde în mod strategic informații lui Sam. Între timp, Sam și Frankie participă la un miting pentru drepturile femeilor, unde Sam este uimită de viziunea expansivă a lui Frankie asupra lumii și își face griji că a rămas în urmă în ceea ce privește evoluția vieții fiicei sale.",
-            "brief": "Sam este privită cu adevărat.",
-            "medium": "Sam este luată în considerare pentru rolul principal într-un serial de comedie, dar sunt mulți factori în joc. Între timp, Sam - care nu este implicată în aceste mașinațiuni - se confruntă cu epuizarea și stresul provocate de copii."
-          }
-        },
-        {
-          "seasonNumber": 1,
-          "episodeNumber": 5,
-          "providerEpisodeId": "b8f12898-4b00-4f2b-806d-5e702ebe67f6",
-          "title": {
-            "full": "Febra viitorului",
-            "brief": null
-          },
-          "description": {
-            "full": "Sam se vede nevoită să ducă singură gustările la echipa de fotbal a lui Frankie, atunci când Frankie spune că este prea bolnavă pentru a merge la antrenamentul de fotbal. Când Sam află că una dintre mamele fetelor urmează să fie supusă unei intervenții chirurgicale dificile, începe să se gândească la moarte și o întreabă pe Phil dacă și-a făcut testamentul, deși nu era pregătită pentru răspunsul pe care urma să-l primească. Pe măsură ce Frankie este tot mai bolnavă, Sam și Max iau prânzul împreună și se implică în treburile altora, în loc să-și vadă de treburile lor. După o vizită la consilierul ei de orientare pentru facultate și o după-amiază petrecută cu prietenii ei leneși, Max se gândește cu îngrijorare la viitorul ei și le face adulților din viața ei o mărturisire importantă legată de nesiguranța ei.",
-            "brief": "Sam are gustări și Max se gândește la lucruri.",
-            "medium": "Când Frankie se îmbolnăvește, iar una dintre mamele din echipa ei de fotbal suferă o operație dificilă, Sam începe să se gândească la moarte și o întreabă pe Phil dacă și-a făcut un testament."
-          }
         }
       ],
       "hasValidationsErros": false
@@ -241,48 +199,6 @@ SMSM_NFX_ORIGIN_COUNTRY_CODE=RO
           "description": {
             "full": "Sam descoperă că cei mici au distrus casa cât a fost ea plecată. Ginecologul ei îi dă niște vești neașteptate, după care trebuie să vorbească la un seminar despre împuternicirea femeilor și fetelor la liceul lui Frankie.",
             "brief": "Sam descoperă că cei mici au distrus casa cât a fost ea plecată. Ginecologul ei îi dă niște vești neașteptate, după care trebuie să vorbească la un seminar despre împuternicirea femeilor și fetelor la liceul lui Frankie.",
-            "medium": null
-          }
-        },
-        {
-          "seasonNumber": 1,
-          "episodeNumber": 3,
-          "providerEpisodeId": "urn:hbo:episode:GYQLBwgR0ak_CJwEAAAAp",
-          "title": {
-            "full": "Episod 3",
-            "brief": "Episod 3"
-          },
-          "description": {
-            "full": "Sam aduce un coleg la cină – pe Mel, regizorul filmului la care lucrează. Prietena ei, Sunny, care trăiește prin ea, crede că ea și Mel ar trebui să aibă o aventură, cu toate că el este însurat. Mel se înțelege bine cu copii... însă nu și cu Phil.",
-            "brief": "Sam aduce un coleg la cină – pe Mel, regizorul filmului la care lucrează. Prietena ei, Sunny, care trăiește prin ea, crede că ea și Mel ar trebui să aibă o aventură, cu toate că el este însurat. Mel se înțelege bine cu copii... însă nu și cu Phil.",
-            "medium": null
-          }
-        },
-        {
-          "seasonNumber": 1,
-          "episodeNumber": 4,
-          "providerEpisodeId": "urn:hbo:episode:GYT-VMAe_csIgGwEAAABH",
-          "title": {
-            "full": "Episod 4",
-            "brief": "Episod 4"
-          },
-          "description": {
-            "full": "Sam este luată în considerare pentru rolul principal într-un serial, însă decizia va fi influențată de mulți factori externi. Între timp, Sam se confruntă cu epuizarea și stresul provocate de copii și încearcă să țină pasul cu viața lui Frankie.",
-            "brief": "Sam este luată în considerare pentru rolul principal într-un serial, însă decizia va fi influențată de mulți factori externi. Între timp, Sam se confruntă cu epuizarea și stresul provocate de copii și încearcă să țină pasul cu viața lui Frankie.",
-            "medium": null
-          }
-        },
-        {
-          "seasonNumber": 1,
-          "episodeNumber": 5,
-          "providerEpisodeId": "urn:hbo:episode:GYT-VbANbA5-QqQEAAABv",
-          "title": {
-            "full": "Episod 5",
-            "brief": "Episod 5"
-          },
-          "description": {
-            "full": "Când Frankie se îmbolnăvește și una dintre mamele din echipa ei de fotbal face o operație dificilă, Sam contemplează mortalitatea și îl întreabă pe Phil dacă a făcut un testament.",
-            "brief": "Când Frankie se îmbolnăvește și una dintre mamele din echipa ei de fotbal face o operație dificilă, Sam contemplează mortalitatea și îl întreabă pe Phil dacă a făcut un testament.",
             "medium": null
           }
         }
