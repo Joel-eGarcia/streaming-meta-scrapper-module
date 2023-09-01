@@ -38,7 +38,6 @@ SMSM_NFX_ORIGIN_COUNTRY_CODE=RO
 ##  Metadata response example
 ```json
 {
-{
   "count": 2,
   "validResultsCount": 2,
   "ids": {
