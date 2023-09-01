@@ -8,7 +8,7 @@ const streamingMeta = require('streaming-meta-scrapper');
 
 (async () => {
 	const scrapper = new streamingMeta({
-		name: 'Better Things', // TV or Movie name
+		name: 'Better Things', // Show or Movie name
 		id: 'tt4370596', // IMdb or TMdB ID
 		providers: ['nfx', 'hbm', 'dnp'],
 		locale: 'ro-RO', // Language and Country
