@@ -33,6 +33,7 @@ class Validate {
 	validateMetadata(data) {
 		try {
 			return Joi.object({
+				version: Joi.string().required(),
 				providerShort: Joi.string().required().valid('nfx', 'dnp', 'hbm'),
 				providerNicename: Joi.string().optional(),
 				providerId: Joi.string().required(),
