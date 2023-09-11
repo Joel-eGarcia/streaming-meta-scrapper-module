@@ -48,7 +48,6 @@ class Metadata {
 			},
 			images: {
 				poster: models.image,
-				thumbnail_1_33: models.image,
 				thumbnail: models.image,
 				logo: models.image,
 			},
