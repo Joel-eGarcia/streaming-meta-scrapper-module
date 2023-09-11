@@ -73,8 +73,15 @@ class DisneyPlus {
 					},
 				]
 			);
-			
-			this.metadata.videosArt = this.data?.videoArt;
+			this.metadata.normalizedRating = parseInt(this.data?.ratings[0]?.value) || null;
+			this.metadata['specific'] = {
+				mediaId: this.data?.mediaMetadata?.mediaId,
+				seriesId: this.data?.seriesId,
+				encodedSeriesId: this.data?.encodedSeriesId,
+				familyId: this.data?.family?.familyId,
+				encodedFamilyId: this.data?.family?.encodedFamilyId,
+				videosArt: this.data?.videoArt,
+			};
 			
 			if (this._options.mediaType === 'show') {
 				this.seasons = this.response?.data?.DmcSeriesBundle?.seasons?.seasons;
@@ -88,7 +95,8 @@ class DisneyPlus {
 						})
 					);
 					let episodes = seasonData?.data?.DmcEpisodes?.videos;
-					for (let {seasonSequenceNumber, episodeSequenceNumber, contentId, text} of episodes) {
+					for (let {seasonSequenceNumber, episodeSequenceNumber, 
+						contentId, text, family, seriesId, videoId, mediaMetadata, programId, ratings} of episodes) {
 						let episode = this.Metadata.episodeModel();
 						episode.seasonNumber = seasonSequenceNumber;
 						episode.episodeNumber = episodeSequenceNumber;
@@ -102,7 +110,17 @@ class DisneyPlus {
 							let descriptionPath = text.description[value].program.default;
 							if (descriptionPath.language === this._options.languageCode) 
 							episode.description[value] = descriptionPath.content;
+						
 						}
+						episode.normalizedRating = parseInt(ratings[0]?.value) || null;
+						episode['specific'] = {
+							mediaId: mediaMetadata.mediaId,
+							familyId: family?.familyId,
+							encodedFamilyId: family?.encodedFamilyId,
+							seasonId: seasonId,
+							videoId: videoId,
+							programId: programId,
+						};
 						this.metadata.episodes.push(episode);
 					}
 				}
