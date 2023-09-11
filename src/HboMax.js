@@ -24,10 +24,10 @@ class HboMax {
 
 	async #getData() {
 		try {
-			this.tokens = await cachedHbmTokens();
-			if(!this.tokens) {
+			if(!await cachedHbmTokens()) {
 				throw new Error('No authorization tokens');
 			}
+			this.tokens = await cachedHbmTokens();
 			const headers = {
 				headers: {'Authorization': `Bearer ${this.tokens.refresh_token}`},
 			}
@@ -80,24 +80,33 @@ class HboMax {
 						imageType: 'tileburnedin', 
 						imageMetadataType: 'thumbnail',
 						apiUrl: this.dataId?.body?.images?.logoburnedin,
-						size: '960x540',
+						size: '1920x1080',
 					}, 
 				]
 			);
+			this.metadata.normalizedRating = this.dataId?.body?.normalizedRating?.value || null;
+			
+			const references = this.dataId?.body?.references?.edits;
+			if (references) this.metadata['specific'] = this.#setSpecficData(references);
 			
 			if (this._options.mediaType === 'show') {
 				this.textTypes = ['full', 'medium', 'brief'];
 				for (const { id, body } of this.data) {
 					if (id.includes('urn:hbo:episode:')) {
-						let episode = this.Metadata.episodeModel();
+						const episode = this.Metadata.episodeModel();
 						episode.seasonNumber = body.seasonNumber;
 						episode.episodeNumber = body.numberInSeason;
 						episode.providerEpisodeId = id;
 						for (const value of this.textTypes) {
 							let contentKey = (value === 'brief') ? 'short' : value;
-							if (value !== 'medium') episode.title[value] = body?.titles[contentKey] || null;
-							episode.description[value] =  body?.summaries[contentKey] || null;
+							if (value !== 'medium') {
+								episode.title[value] = body?.titles[contentKey] || null;
+								episode.description[value] =  body?.summaries[contentKey] || null;
+							}
 						}
+						episode.normalizedRating = body.normalizedRating.value;
+						if (!this.metadata.normalizedRating) this.metadata.normalizedRating = episode.normalizedRating;
+						episode['specific'] = this.#setSpecficData(body?.references?.edits);
 						this.metadata.episodes.push(episode);
 					}
 				}
@@ -109,7 +118,7 @@ class HboMax {
 			console.error('getMetadata: ', err);
 		}
 	}
-		
+	
 	#setMetadataImages(entries = []) {
 		try {
 			const id = this.metadata.providerId.split(':').pop();
@@ -140,6 +149,23 @@ class HboMax {
 			}
 		} catch (err) {
 			console.error('setMetadataTexts: ', err);
+		}
+	}
+	
+	#setSpecficData(references) {
+		try {
+			if (!Array.isArray(references)) throw new Error(`References need to be an array`);
+			const map = {
+				movie: 'feature',
+				show: 'episode',
+			}
+			return {
+				normalizedId: references[0].split(`:${map[this._options.mediaType]}:`).pop(),
+				videoId: references[0].split('urn:hbo:edit:').pop().split(`:${map[this._options.mediaType]}:`)[0],
+			};
+		} catch (err) {
+			console.error('setSpecficData: ', err);
+			return {};
 		}
 	}
 	
