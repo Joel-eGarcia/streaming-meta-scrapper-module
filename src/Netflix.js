@@ -122,7 +122,9 @@ class Netflix {
 				{ metadata: 'poster', contentType: 'boxarts' },
 				{ metadata: 'thumbnail', contentType: 'boxarts' },
 			]);
-
+			this.metadata.normalizedRating = this.data.jsonGraph.videos[this._options.id]
+				.jawSummary.value.maturity.rating.value.replace(/\D/g,'');
+			
 			if (this._options.mediaType === 'show') {
 				for (let data of Object.values(this.data.jsonGraph.videos)) {
 					if (data?.summary?.value?.type === 'episode') {
@@ -132,6 +134,7 @@ class Netflix {
 						episode.providerEpisodeId = data.summary.value.id.toString();
 						episode.title.full = data.title.value;
 						episode.description.full = data.synopsis.value;
+						episode.normalizedRating = data.maturity.value.rating.value.replace(/\D/g,'');
 						this.metadata.episodes.push(episode);
 					}
 				}
