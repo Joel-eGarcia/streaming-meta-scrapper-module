@@ -43,7 +43,6 @@ class Validate {
 					poster: schemas.image,
 					thumbnail: schemas.image,
 					logo: schemas.image,
-					thumbnail_1_33: schemas.image.fork(['url', 'id', 'width', 'height'], (schema) => schema.optional()),
 				}),
 				normalizedRating: Joi.number().integer().allow(null),
 				specific: Joi.object(),
