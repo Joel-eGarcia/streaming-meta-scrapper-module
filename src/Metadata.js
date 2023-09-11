@@ -33,6 +33,7 @@ class Metadata {
 
 	model() {
 		return {
+			version: '1.1',
 			providerShort: this._options.providerShort,
 			providerNicename: this._options.providerNicename,
 			providerId: null,
