@@ -45,6 +45,8 @@ class Validate {
 					logo: schemas.image,
 					thumbnail_1_33: schemas.image.fork(['url', 'id', 'width', 'height'], (schema) => schema.optional()),
 				}),
+				normalizedRating: Joi.number().integer().allow(null),
+				specific: Joi.object(),
 				episodes: Joi.array()
 					.items({
 						seasonNumber: Joi.number().integer().required(),
@@ -52,6 +54,8 @@ class Validate {
 						providerEpisodeId: Joi.string().required(),
 						title: schemas.title,
 						description: schemas.description().fork(['full'], (schema) => schema.optional()),
+						normalizedRating: Joi.number().integer().allow(null),
+						specific: Joi.object(),
 					})
 					.when('mediaType', { is: 'show', then: Joi.array().min(1).required() }),
 			}).validate(data, this._options);
