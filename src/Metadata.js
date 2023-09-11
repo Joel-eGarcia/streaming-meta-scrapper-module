@@ -44,7 +44,7 @@ class Metadata {
 			description: {
 				full: null,
 				brief: null,
-				mediu: null,
+				medium: null,
 			},
 			images: {
 				poster: models.image,
@@ -52,8 +52,9 @@ class Metadata {
 				thumbnail: models.image,
 				logo: models.image,
 			},
+			normalizedRating: null,
+			specific: {},
 			episodes: [],
-			videosArt: [],
 		};
 	}
 
@@ -69,8 +70,10 @@ class Metadata {
 			description: {
 				full: null,
 				brief: null,
-				mediu: null,
+				medium: null,
 			},
+			normalizedRating: null,
+			specific: {},
 		};
 	}
 }
